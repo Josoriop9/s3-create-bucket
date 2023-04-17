@@ -1,24 +1,27 @@
 const AWS = require('aws-sdk');
-const dotenv = require('dotenv'); 
+const dotenv = require('dotenv') 
+const { v4: uuidv4 } = require('uuid');
 
 dotenv.config()
 
-let s3 = new AWS.S3({
-region: "us-west-2",
+s3 = new AWS.S3({
 accessKeyId: process.env.AWS_ACCESS_KEY_ID,
 secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
+region: process.env.REGION,
 });
 
-const params = {
-    Bucket: 'my-bucket-name-test-april-15-23',
-    ACL: 'public-read'
+const bucketName = `my-bucket-${uuidv4()}`;
+
+const bucketParams = {
+    Bucket: bucketName,
+    ACL: 'private'
   };
   
-  s3.createBucket(params, function(err, data) {
+  s3.createBucket(bucketParams, function(err, data) {
     if (err) {
-      console.log('Error creating the bucket:', err);
+      console.log('Error trying to create your brand new bucket:', err);
     } else {
-      console.log('Bucket created successfully:', data.Location);
+      console.log('Bucket created ✅', data.Location);
     }
   });
 
