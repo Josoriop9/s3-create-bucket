@@ -1,5 +1,5 @@
 # s3-create-bucket
-CREATE A BRAND NEW BUCKET FROM THE SDK ✅
+CREATE A BRAND NEW BUCKET FROM NODEJS SDK ✅
 
 1️⃣ Work on your code (here we are using nodejs) - npm the necesary libs and deps
 
@@ -11,3 +11,6 @@ CREATE A BRAND NEW BUCKET FROM THE SDK ✅
 
 
 4️⃣ Open up your aws account and see your new bucket
+
+
+see the material here: https://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/s3-example-creating-buckets.html
