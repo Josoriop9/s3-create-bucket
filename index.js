@@ -4,7 +4,7 @@ const dotenv = require('dotenv');
 dotenv.config()
 
 let s3 = new AWS.S3({
-region: "us-west-2",
+region: process.env.REGION,
 accessKeyId: process.env.AWS_ACCESS_KEY_ID,
 secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
 });
