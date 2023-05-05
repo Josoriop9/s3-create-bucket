@@ -1,4 +1,4 @@
-# s3-create-bucket
+# ☁️ s3-create-bucket
 CREATE A BRAND NEW BUCKET FROM NODEJS SDK ✅
 
 1️⃣ Work on your code (nodejs in this example) - npm the necesary libs and deps
